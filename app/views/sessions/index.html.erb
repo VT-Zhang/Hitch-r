@@ -57,7 +57,16 @@
           <div class="row">
               <div class="col l4"></div>
               <div class="col l4">
-                  <a class="wave-effect btn-large hoverable red accent-2" href="/users/new">Become A Member</a>
+                  <a class="wave-effect btn-large hoverable red accent-2" href="#modal1">Become A Member</a>
+                  <div id="modal1" class="modal">
+                    <div class="modal-content">
+                      <h4>Modal Header</h4>
+                      <p>A bunch of text</p>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                  </div>
               </div>
           </div>
       </div>
@@ -172,5 +181,6 @@
     $(document).ready(function(){
            $('.parallax').parallax();
            $('ul.tabs').tabs();
+           $('.modal').modal();
     });
 </script>
