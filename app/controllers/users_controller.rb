@@ -12,6 +12,8 @@ class UsersController < ApplicationController
     end
 
     def show
+        @driveTrips = Trip.where(user: current_user)
+        @cars = Car.where(user: current_user)
         render "/users/show.html.erb"
     end
 

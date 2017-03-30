@@ -63,13 +63,13 @@
 
       <% if flash[:success] %>
       <% flash[:success].each do |message| %>
-      <script>Materialize.toast("<%= message %>", 8000, 'rounded green');</script>
+      <script>Materialize.toast("<%= message %>", 4000, 'rounded green');</script>
       <% end %>
       <% end %>
 
       <% if flash[:error] %>
       <% flash[:error].each do |message| %>
-      <script>Materialize.toast("<%= message %>", 8000, 'rounded red');</script>
+      <script>Materialize.toast("<%= message %>", 6000, 'rounded red');</script>
       <% end %>
       <% end %>
 

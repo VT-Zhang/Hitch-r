@@ -1,7 +1,7 @@
 class Trip < ApplicationRecord
   belongs_to :car
   belongs_to :user
-  mas_many :users, through: :passengers
+  has_many :users, through: :passengers
   validates :dStreetNum, :dStreet, :dCity, :dState, :dZip, :aStreetNum, :aStreet, :aCity, :aState, :aZip, :dDate, :aDate, :price, presence: true
 
   validate :validDates
