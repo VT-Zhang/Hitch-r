@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
             if user.authenticate(params[:password])
                 session[:user_id] = user.id
                 flash[:success] = ["User successfully logged in!"]
-                redirect_to "/"
+                redirect_to "/users/profile/#{session[:user_id]}"
             else
                 flash[:error] = ["Sorry, that password is invalid"]
                 redirect_to "/"
