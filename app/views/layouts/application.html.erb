@@ -18,6 +18,18 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+      <% if flash[:error] %>
+      <% flash[:error].each do |message| %>
+      <p style="color:red;"><%= message %></p>
+      <% end %>
+      <% end %>
+
+      <% if flash[:success] %>
+      <% flash[:success].each do |message| %>
+      <p style="color:green;"><%= message %></p>
+      <% end %>
+      <% end %>
+
       <%= yield %>
   </body>
 </html>
