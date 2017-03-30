@@ -35,6 +35,8 @@ gem 'hirb'
 gem 'rails-footnotes'
 gem 'json'
 
+gem 'materialize-sass'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

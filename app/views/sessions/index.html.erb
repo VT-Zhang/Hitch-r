@@ -1,0 +1,176 @@
+<style>
+ #logo{
+     margin-top: 5px;
+     margin-left: 80px;
+     font-weight: 300;
+     font-size: 45px;
+ }
+ #nav{
+     height: 80px;
+ }
+ body {
+     min-height: 200vh;
+ }
+ #girl{
+     height: 750px;
+ }
+ #road{
+     height: auto;
+ }
+ .thin-text{
+     font-weight: 300;
+     background: rgba(96,125,139,.4);
+     padding: 40px;
+     border-radius: 10px;
+ }
+
+</style>
+
+<nav>
+   <div id="nav" class="nav-wrapper red lighten-1 hoverable">
+     <a href="#" id="logo" class="brand-logo">Hitchr!</a>
+     <form action="/sessions/create" method="post">
+         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+         <div class="row">
+             <div class="col s2 right" >
+                 <button id="login_button" class="btn waves-effect green hoverable" type="submit" name="action">Login</button>
+             </div>
+             <div class="input-field col s2 right">
+               <input placeholder="Password" id="password" type="password" class="validate">
+               <label for="password">Password</label>
+             </div>
+             <div class="input-field col s2 right">
+                <input placeholder="Email" id="email" type="email" class="validate">
+                <label for="email">Email</label>
+             </div>
+         </div>
+     </form>
+   </div>
+ </nav>
+ <div id="girl" class="parallax-container valign-wrapper">
+      <div class="container">
+          <div class="row">
+              <div class="col l11 s12 white-text">
+                  <h3 class="thin-text valign">On the road alone, or need a ride? Welcome to Hitchr! </h3>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col l4"></div>
+              <div class="col l4">
+                  <a class="wave-effect btn-large hoverable red accent-2" href="/users/new">Become A Member</a>
+              </div>
+          </div>
+      </div>
+      <div class="parallax"><%= image_tag "girl.jpg" %></div>
+ </div>
+ <div class="section red lighten-1 hoverable">
+   <div class="row container">
+     <h2 class="header center white-text">How It Works</h2>
+     <ul id="tabs-swipe" class="tabs">
+        <li class="tab col s6"><a class="active"href="#swipe-1">For Drivers</a></li>
+        <li class="tab col s6"><a href="#swipe-2">For Riders</a></li>
+     </ul>
+     <div id="swipe-1" class="col s12 white-text">Spicy jalapeno bacon ipsum dolor amet meatball doner pastrami short loin hamburger meatloaf chuck strip steak corned beef cupim turkey flank turducken drumstick. Cow cupim brisket, tail flank pork belly swine. Kielbasa frankfurter cupim bacon pork jowl short ribs pastrami corned beef turducken burgdoggen beef cow. Ground round boudin t-bone, drumstick shank burgdoggen fatback. Ball tip brisket ribeye, jowl kevin pastrami porchetta doner landjaeger ground round. Meatball jerky boudin pork. Porchetta cow meatloaf prosciutto.</div>
+     <div id="swipe-2" class="col s12 white-text">Spicy jalapeno bacon ipsum dolor amet short loin tongue t-bone, andouille pig shankle kielbasa brisket alcatra pork loin. Corned beef andouille sirloin beef. Sirloin sausage filet mignon, bresaola ribeye drumstick pork chop pancetta pig kielbasa jerky flank short loin turkey. Beef ribs short loin filet mignon porchetta. Pork loin spare ribs rump tri-tip. Corned beef porchetta pork belly pig, alcatra turducken salami. Pork chop andouille meatloaf, prosciutto turducken fatback landjaeger.</div>
+   </div>
+ </div>
+ <div id="road" class="parallax-container">
+
+     <div class="container align-wrapper">
+         <h2 class="header white-text center-align">
+             List of available trips in your area
+         </h2>
+         <div class="row">
+          <table class="striped thin-text">
+            <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Leave From</th>
+                  <th>Destination</th>
+                  <th>Leave On</th>
+                  <th>$$ Per Rider</th>
+                  <th>Seats Available</th>
+                  <th>Vehicle</th>
+                  <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Washington, DC</td>
+                  <td>New York, NY</td>
+                  <td>04/01/2017</td>
+                  <td>$25</td>
+                  <td>3 of 4</td>
+                  <td>2017 BMW M8</td>
+                  <td><a class="waves-effect green btn hoverable" href="">Details</a></td>
+                </tr>
+              <tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="center-align">
+          <iframe
+              width="800"
+              height="450"
+              frameborder="0" style="border:1"
+              src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCGkc4zfM8yunEOefOTtYk2C8HN9QYuu7w&origin=White+House,Washington,DC&destination=Time+Square,New+York,NY" allowfullscreen>
+          </iframe>
+        </div>
+          <br />
+          <br />
+          <div class="row">
+           <table class="striped thin-text">
+             <thead>
+                 <tr>
+                   <th>#</th>
+                   <th>Leave From</th>
+                   <th>Destination</th>
+                   <th>Leave On</th>
+                   <th>$$ Per Rider</th>
+                   <th>Seats Available</th>
+                   <th>Vehicle</th>
+                   <th>Action</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr>
+                     <td>2</td>
+                     <td>Lorton, VA</td>
+                     <td>San Francisco, CA</td>
+                     <td>04/05/2017</td>
+                     <td>$100</td>
+                     <td>2 of 4</td>
+                     <td>2016 Mercedes S63</td>
+                   <td><a class="waves-effect green btn hoverable" href="">Details</a></td>
+                 </tr>
+               <tr>
+             </tbody>
+           </table>
+         </div>
+         <div class="center-align">
+             <iframe
+                 width="800"
+                 height="450"
+                 frameborder="0" style="border:1"
+                 src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCGkc4zfM8yunEOefOTtYk2C8HN9QYuu7w&origin=Lorton,VA&destination=San+Francisco,CA" allowfullscreen>
+             </iframe>
+         </div>
+     <div class="parallax"><<%= image_tag "road.jpg" %></div>
+ </div>
+<br />
+<br />
+ <footer class="page-footer red lighten-1 hoverable">
+      <div class="footer-copyright">
+        <div class="container">
+        © 2017 Copyright NAJZ Inc.
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+</footer>
+<script>
+    $(document).ready(function(){
+           $('.parallax').parallax();
+           $('ul.tabs').tabs();
+    });
+</script>
