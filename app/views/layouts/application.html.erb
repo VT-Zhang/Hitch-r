@@ -10,7 +10,7 @@
      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -18,15 +18,17 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-      <% if flash[:error] %>
-      <% flash[:error].each do |message| %>
-      <p style="color:red;"><%= message %></p>
-      <% end %>
-      <% end %>
+
 
       <% if flash[:success] %>
       <% flash[:success].each do |message| %>
-      <p style="color:green;"><%= message %></p>
+      <script>Materialize.toast("<%= message %>", 8000);</script>
+      <% end %>
+      <% end %>
+
+      <% if flash[:error] %>
+      <% flash[:error].each do |message| %>
+      <script>Materialize.toast("<%= message %>", 8000);</script>
       <% end %>
       <% end %>
 
