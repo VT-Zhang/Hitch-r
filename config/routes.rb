@@ -7,7 +7,9 @@ Rails.application.routes.draw do
    post "/users/create" => "users#create"
    post "/users/update/:id" => "users#update"
 
+   get "/cars/view/:id" => "cars#show"
    post "/cars/create" => "cars#create"
 
+   get "/trips/view/:id" => "trips#show"
    post "/trips/create" => "trips#create"
 end

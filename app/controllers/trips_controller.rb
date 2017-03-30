@@ -10,4 +10,9 @@ class TripsController < ApplicationController
             redirect_to "/users/profile/#{session[:user_id]}"
         end
     end
+
+    def show
+        @trip = Trip.find(params[:id])
+        render "/trips/show.html.erb"
+    end
 end

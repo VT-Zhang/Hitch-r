@@ -9,4 +9,9 @@ class CarsController < ApplicationController
             redirect_to "/cars/create"
         end
     end
+
+    def show
+        @car = Car.find(params[:id])
+        render "/cars/show.html.erb"
+    end
 end
