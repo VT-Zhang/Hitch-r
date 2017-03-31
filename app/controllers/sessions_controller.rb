@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
     def index
+        @trips = Trip.all
         session[:user_id] = nil
-        
     end
 
     def create

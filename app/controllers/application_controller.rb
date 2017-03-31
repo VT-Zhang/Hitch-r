@@ -12,6 +12,13 @@ class ApplicationController < ActionController::Base
       Date.today
   end
 
+  def requireLogin
+      if session[:user_id] == nil
+          flash[:error] = ["You must login!"]
+          redirect_to "/"
+      end
+  end
+
   def current_user
       User.find(session[:user_id]) if session[:user_id]
   end

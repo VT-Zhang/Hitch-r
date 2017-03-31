@@ -11,5 +11,5 @@ Rails.application.routes.draw do
    post "/cars/create" => "cars#create"
 
    get "/trips/view/:id" => "trips#show"
-   post "/trips/create" => "trips#create"
+   post "/trips/create/" => "trips#create"
 end
