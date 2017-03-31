@@ -28,159 +28,167 @@
    </div>
  </nav>
 
-             <div id="create_cars" class="modal">
-                 <div class="modal-content">
-                     <form action="/cars/create" method="post">
-                         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                         <div class="row">
-                             <h4 class="center-align">Adding A New Vehicle</h4>
-                         </div>
-                         <div class="row">
-                             <div class="col s2"></div>
-                             <div class="input-field col s4">
-                               <input placeholder="Make" name="make" type="text" class="validate">
-                               <label for="make">Make</label>
-                             </div>
-                             <div class="input-field col s4 ">
-                                 <input placeholder="Model" name="model" type="text" class="validate">
-                                 <label for="model">Model</label>
-                             </div>
-                         </div>
-                         <div class="row">
-                             <div class="col s2"></div>
-                             <div class="input-field col s4">
-                                 <input placeholder="Year" name="year" type="text" class="validate">
-                                 <label for="year">Year</label>
-                             </div>
-                             <div class="input-field col s4 ">
-                                 <input placeholder="Trim" name="trim" type="text" class="validate">
-                                 <label for="trim">Trim</label>
-                             </div>
-                         </div>
-                         <div class="row">
-                             <div class="col s2"></div>
-                             <div class="input-field col s4">
-                               <input placeholder="Color" name="color" type="text" class="validate">
-                               <label for="color">Color</label>
-                             </div>
-                             <div class="input-field col s4 ">
-                                 <input placeholder="Style" name="style" type="text" class="validate">
-                                 <label for="style">Style</label>
-                             </div>
-                         </div>
-                         <div class="row">
-                             <div class="col s2"></div>
-                             <div class="input-field col s4">
-                                  <input placeholder="Mileage" name="mileage" type="text" class="validate">
-                                   <label for="mileage">Mileage</label>
-                             </div>
-                             <div class="input-field col s4 ">
-                                 <input placeholder="Seats" name="seats" type="text" class="validate">
-                                 <label for="seats">Available Seats</label>
-                             </div>
-                         </div>
-                         <div class="row">
-                             <div class="col s3"></div>
-                             <div class="col s3">
-                                 <button id="login_button" class="btn waves-effect green hoverable" type="submit" name="action">Add Car</button>
-                             </div>
-                             <div class="col s3">
-                                 <a href="" class="modal-action modal-close btn waves-effect green hoverable">Back</a>
-                             </div>
-                         </div>
-                     </form>
+ <div id="create_cars" class="modal">
+     <div class="modal-content">
+         <form action="/cars/create" method="post">
+             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+             <div class="row">
+                 <h4 class="center-align">Adding A New Vehicle</h4>
+             </div>
+             <div class="row">
+                 <div class="col s2"></div>
+                 <div class="input-field col s4">
+                   <input placeholder="Make" name="make" type="text" class="validate">
+                   <label for="make">Make</label>
+                 </div>
+                 <div class="input-field col s4 ">
+                     <input placeholder="Model" name="model" type="text" class="validate">
+                     <label for="model">Model</label>
                  </div>
              </div>
-
-
-
-
-             <div id="create_trips" class="modal">
-               <div class="modal-content">
-                   <form action="/trips/create" method="post">
-                       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                       <div class="row">
-                           <p class="center-align">Starting Place Information</p>
-                       </div>
-                       <div class="row">
-                           <div class="col s2"></div>
-                           <div class="input-field col s3">
-                             <input placeholder="Number" name="dStreetNum" type="text" class="validate">
-                             <label for="dStreetNum">Street Number</label>
-                           </div>
-                           <div class="input-field col s3">
-                             <input placeholder="Street Name" name="dStreet" type="text" class="validate">
-                             <label for="dStreet">Street Name</label>
-                           </div>
-                           <div class="input-field col s3">
-                               <input placeholder="City" name="dCity" type="text" class="validate">
-                               <label for="dCity">City</label>
-                           </div>
-                       </div>
-                       <div class="row">
-                           <div class="col s2"></div>
-                           <div class="input-field col s3">
-                                <input placeholder="State" name="dState" type="text" class="validate">
-                                 <label for="dState">State</label>
-                           </div>
-                           <div class="input-field col s3 ">
-                               <input placeholder="Zipcode" name="dZip" type="text" class="validate">
-                               <label for="dZip">Zip Code</label>
-                           </div>
-                           <div class="input-field col s3 ">
-                               <input placeholder="Leave Date" name="dDate" type="date" class="validate datepicker">
-                               <label for="dDate">Leave Date</label>
-                           </div>
-                       </div>
-                       <div class="row">
-                           <p class="center-align">Desitination Information</p>
-                       </div>
-                       <div class="row">
-                           <div class="col s2"></div>
-                           <div class="input-field col s3">
-                             <input placeholder="Number" name="aStreetNum" type="text" class="validate">
-                             <label for="aStreetNum">Street Number</label>
-                           </div>
-                           <div class="input-field col s3">
-                             <input placeholder="Street Name" name="aStreet" type="text" class="validate">
-                             <label for="aStreet">Street Name</label>
-                           </div>
-                           <div class="input-field col s3">
-                               <input placeholder="City" name="aCity" type="text" class="validate">
-                               <label for="aCity">City</label>
-                           </div>
-                       </div>
-                       <div class="row">
-                           <div class="col s2"></div>
-                           <div class="input-field col s3">
-                                <input placeholder="State" name="aState" type="text" class="validate">
-                                 <label for="aState">State</label>
-                           </div>
-                           <div class="input-field col s3 ">
-                               <input placeholder="Zipcode" name="aZip" type="text" class="validate">
-                               <label for="aZip">Zip Code</label>
-                           </div>
-                           <div class="input-field col s3 ">
-                               <input placeholder="Arrival Date" name="aDate" type="date" class="validate datepicker">
-                               <label for="aDate">Arrival Date</label>
-                           </div>
-                       </div>
-                       <div class="row">
-                           <div class="col s4"></div>
-                           <div class="input-field col s4">
-                                <input placeholder="$Price" name="price" type="text" class="validate">
-                                 <label for="price">Price/Seat</label>
-                           </div>
-                       </div>
-                       <div class="row">
-                           <div class="col s3"></div>
-                           <div class="col s3">
-                               <button id="login_button" class="btn waves-effect blue hoverable" type="submit" name="action">Add New Trip</button>
-                           </div>
-                           <div class="col s3">
-                               <a href="" class="modal-action modal-close btn waves-effect blue hoverable">Back</a>
-                           </div>
-                       </div>
-                   </form>
-               </div>
+             <div class="row">
+                 <div class="col s2"></div>
+                 <div class="input-field col s4">
+                     <input placeholder="Year" name="year" type="text" class="validate">
+                     <label for="year">Year</label>
+                 </div>
+                 <div class="input-field col s4 ">
+                     <input placeholder="Trim" name="trim" type="text" class="validate">
+                     <label for="trim">Trim</label>
+                 </div>
              </div>
+             <div class="row">
+                 <div class="col s2"></div>
+                 <div class="input-field col s4">
+                   <input placeholder="Color" name="color" type="text" class="validate">
+                   <label for="color">Color</label>
+                 </div>
+                 <div class="input-field col s4 ">
+                     <input placeholder="Style" name="style" type="text" class="validate">
+                     <label for="style">Style</label>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col s2"></div>
+                 <div class="input-field col s4">
+                      <input placeholder="Mileage" name="mileage" type="text" class="validate">
+                       <label for="mileage">Mileage</label>
+                 </div>
+                 <div class="input-field col s4 ">
+                     <input placeholder="Seats" name="seats" type="text" class="validate">
+                     <label for="seats">Available Seats</label>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col s3"></div>
+                 <div class="col s3">
+                     <button id="login_button" class="btn waves-effect green hoverable" type="submit" name="action">Add Car</button>
+                 </div>
+                 <div class="col s3">
+                     <a href="" class="modal-action modal-close btn waves-effect green hoverable">Back</a>
+                 </div>
+             </div>
+         </form>
+     </div>
+ </div>
+
+
+
+
+<div id="create_trips" class="modal">
+<div class="modal-content">
+   <form action="/trips/create" method="post">
+       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+       <div class="row">
+           <p class="center-align">Starting Place Information</p>
+       </div>
+       <div class="row">
+           <div class="col s2"></div>
+           <div class="input-field col s3">
+             <input placeholder="Number" name="dStreetNum" type="text" class="validate">
+             <label for="dStreetNum">Street Number</label>
+           </div>
+           <div class="input-field col s3">
+             <input placeholder="Street Name" name="dStreet" type="text" class="validate">
+             <label for="dStreet">Street Name</label>
+           </div>
+           <div class="input-field col s3">
+               <input placeholder="City" name="dCity" type="text" class="validate">
+               <label for="dCity">City</label>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col s2"></div>
+           <div class="input-field col s3">
+                <input placeholder="State" name="dState" type="text" class="validate">
+                 <label for="dState">State</label>
+           </div>
+           <div class="input-field col s3 ">
+               <input placeholder="Zipcode" name="dZip" type="text" class="validate">
+               <label for="dZip">Zip Code</label>
+           </div>
+           <div class="input-field col s3 ">
+               <input placeholder="Leave Date" name="dDate" type="date" class="validate datepicker">
+               <label for="dDate">Leave Date</label>
+           </div>
+       </div>
+       <div class="row">
+           <p class="center-align">Desitination Information</p>
+       </div>
+       <div class="row">
+           <div class="col s2"></div>
+           <div class="input-field col s3">
+             <input placeholder="Number" name="aStreetNum" type="text" class="validate">
+             <label for="aStreetNum">Street Number</label>
+           </div>
+           <div class="input-field col s3">
+             <input placeholder="Street Name" name="aStreet" type="text" class="validate">
+             <label for="aStreet">Street Name</label>
+           </div>
+           <div class="input-field col s3">
+               <input placeholder="City" name="aCity" type="text" class="validate">
+               <label for="aCity">City</label>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col s2"></div>
+           <div class="input-field col s3">
+                <input placeholder="State" name="aState" type="text" class="validate">
+                 <label for="aState">State</label>
+           </div>
+           <div class="input-field col s3 ">
+               <input placeholder="Zipcode" name="aZip" type="text" class="validate">
+               <label for="aZip">Zip Code</label>
+           </div>
+           <div class="input-field col s3 ">
+               <input placeholder="Arrival Date" name="aDate" type="date" class="validate datepicker">
+               <label for="aDate">Arrival Date</label>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col s2"></div>
+           <div class="input-field col s4">
+                <input placeholder="$Price" name="price" type="text" class="validate">
+                 <label for="price">Price/Seat</label>
+           </div>
+           <div class="input-field col s4">
+                <select name="car_id">
+                    <% @cars.each do |car| %>
+                    <option value="<%=car.id%>"><%=car.make%> <%=car.model%></option>
+                    <% end %>
+                </select>
+                 <label for="car">Car</label>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col s3"></div>
+           <div class="col s3">
+               <button id="login_button" class="btn waves-effect blue hoverable" type="submit" name="action">Add New Trip</button>
+           </div>
+           <div class="col s3">
+               <a href="" class="modal-action modal-close btn waves-effect blue hoverable">Back</a>
+           </div>
+       </div>
+   </form>
+</div>
+</div>
