@@ -18,9 +18,8 @@ class TripsController < ApplicationController
 
     def update
         trip = Trip.find(params[:id])
-        car = Car.find(find[:car_id])
         trip.dStreetNum = params[:dStreetNum]
-        trip.dStreetNum = params[:dStreet]
+        trip.dStreet = params[:dStreet]
         trip.dCity = params[:dCity]
         trip.dState = params[:dState]
         trip.dZip = params[:dZip]
@@ -31,7 +30,7 @@ class TripsController < ApplicationController
         trip.aZip = params[:aZip]
         trip.dDate = params[:dDate]
         trip.aDate = params[:aDate]
-        trip.car = car
+        trip.car_id = params[:car_id]
         trip.price = params[:price]
         if trip.save
             flash[:success] = ["New Trip Information Saved!!"]
