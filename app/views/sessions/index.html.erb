@@ -1,7 +1,5 @@
 
  <div id="girl" class="parallax-container valign-wrapper">
-     <!-- <a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a> -->
-
       <div class="container">
           <div class="row">
               <div class="col l11 s12 white-text">
@@ -96,7 +94,7 @@
               </div>
               <div class="col l4">
                   <a class="wave-effect btn-large hoverable green" href="#login">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                  <div id="login" class="modal green accent-4">
+                  <div id="login" class="modal">
                     <div class="modal-content">
                         <form action="/sessions/create" method="post">
                             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -131,20 +129,46 @@
  <div class="section red lighten-1 hoverable">
    <div class="row container">
      <h2 class="header center white-text">How It Works</h2>
-     <ul id="tabs-swipe" class="tabs">
-        <li class="tab col s6"><a class="active"href="#swipe-1">For Drivers</a></li>
-        <li class="tab col s6"><a href="#swipe-2">For Riders</a></li>
-     </ul>
-     <div id="swipe-1" class="col s12 white-text">Spicy jalapeno bacon ipsum dolor amet meatball doner pastrami short loin hamburger meatloaf chuck strip steak corned beef cupim turkey flank turducken drumstick. Cow cupim brisket, tail flank pork belly swine. Kielbasa frankfurter cupim bacon pork jowl short ribs pastrami corned beef turducken burgdoggen beef cow. Ground round boudin t-bone, drumstick shank burgdoggen fatback. Ball tip brisket ribeye, jowl kevin pastrami porchetta doner landjaeger ground round. Meatball jerky boudin pork. Porchetta cow meatloaf prosciutto.</div>
-     <div id="swipe-2" class="col s12 white-text">Spicy jalapeno bacon ipsum dolor amet short loin tongue t-bone, andouille pig shankle kielbasa brisket alcatra pork loin. Corned beef andouille sirloin beef. Sirloin sausage filet mignon, bresaola ribeye drumstick pork chop pancetta pig kielbasa jerky flank short loin turkey. Beef ribs short loin filet mignon porchetta. Pork loin spare ribs rump tri-tip. Corned beef porchetta pork belly pig, alcatra turducken salami. Pork chop andouille meatloaf, prosciutto turducken fatback landjaeger.</div>
    </div>
  </div>
  <div id="road" class="parallax-container">
+     <div class="container valign-wrapper">
+         <div id="driver" class="row valign">
+             <div class="col l6 m12 s12">
+                 <div class="card medium thin-text white-text hoverable">
+                     <h3 class="center-align">For Drivers</h3>
+                     <div class="divider"></div>
+                     <br />
+                     <h4 class="center-align"><i class="material-icons">chrome_reader_mode</i> Post Your Trip</h4>
+                     <h4 class="center-align"><i class="material-icons">people</i> Book The Riders</h4>
+                     <h4 class="center-align"><i class="material-icons">attach_money</i> Get There, For Less.</h4>
+                 </div>
+             </div>
+             <div class="col l6 m12 s12">
+                 <div class="card medium thin-text white-text hoverable">
+                     <h3 class="center-align">For Riders</h3>
+                     <div class="divider"></div>
+                     <br />
+                     <h4 class="center-align"><i class="material-icons">search</i> Search The Route</h4>
+                     <h4 class="center-align"><i class="material-icons">people</i> Book The Trip</h4>
+                     <h4 class="center-align"><i class="material-icons">attach_money</i> Get There, For Less.</h4>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="parallax"><<%= image_tag "road.jpg" %></div>
+   </div>
 
-     <div class="container align-wrapper">
-         <h2 class="header white-text center-align">
-             List of available trips in your area
-         </h2>
+<div class="section red lighten-1 hoverable">
+ <div class="row container">
+   <h2 class="header center white-text">List of available trips in your area
+</h2>
+ </div>
+</div>
+
+ <div id="maps" class="container align-wrapper">
+     <br />
+     <br />
          <div class="row">
           <table class="striped thin-text">
             <thead>
@@ -176,7 +200,7 @@
         </div>
         <div class="center-align">
           <iframe
-              width="800"
+              width="900"
               height="450"
               frameborder="0" style="border:1"
               src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCGkc4zfM8yunEOefOTtYk2C8HN9QYuu7w&origin=White+House,Washington,DC&destination=Time+Square,New+York,NY" allowfullscreen>
@@ -215,13 +239,12 @@
          </div>
          <div class="center-align">
              <iframe
-                 width="800"
+                 width="900"
                  height="450"
                  frameborder="0" style="border:1"
                  src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCGkc4zfM8yunEOefOTtYk2C8HN9QYuu7w&origin=Lorton,VA&destination=San+Francisco,CA" allowfullscreen>
              </iframe>
          </div>
-     <div class="parallax"><<%= image_tag "road.jpg" %></div>
  </div>
 <br />
 <br />
