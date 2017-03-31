@@ -14,4 +14,23 @@ class CarsController < ApplicationController
         @car = Car.find(params[:id])
         render "/cars/show.html.erb"
     end
+
+    def update
+        car = Car.find(params[:id])
+        car.make = params[:make]
+        car.model = params[:model]
+        car.year = params[:year]
+        car.trim = params[:trim]
+        car.style = params[:style]
+        car.seats = params[:seats]
+        car.mileage = params[:mileage]
+        car.color = params[:color]
+        if car.save
+            flash[:success] = ["Car information successfully updated!!"]
+            redirect_to "/users/profile/#{current_user.id}"
+        else
+            flash[:error] = car.errors.full_messages
+            redirect_to "/users/profile/#{current_user.id}"
+        end
+    end
 end

@@ -15,4 +15,30 @@ class TripsController < ApplicationController
         @trip = Trip.find(params[:id])
         render "/trips/show.html.erb"
     end
+
+    def update
+        trip = Trip.find(params[:id])
+        car = Car.find(find[:car_id])
+        trip.dStreetNum = params[:dStreetNum]
+        trip.dStreetNum = params[:dStreet]
+        trip.dCity = params[:dCity]
+        trip.dState = params[:dState]
+        trip.dZip = params[:dZip]
+        trip.aStreetNum = params[:aStreetNum]
+        trip.aStreet = params[:aStreet]
+        trip.aCity = params[:aCity]
+        trip.aState = params[:aState]
+        trip.aZip = params[:aZip]
+        trip.dDate = params[:dDate]
+        trip.aDate = params[:aDate]
+        trip.car = car
+        trip.price = params[:price]
+        if trip.save
+            flash[:success] = ["New Trip Information Saved!!"]
+            redirect_to "/users/profile/#{current_user.id}"
+        else
+            flash[:error] = trip.errors.full_messages
+            redirect_to "/users/profile/#{current_user.id}"
+        end
+    end
 end
