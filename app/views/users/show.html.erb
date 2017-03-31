@@ -213,6 +213,7 @@
            </div>
            <div class="input-field col s4">
                 <select name="car_id">
+                    <option value="" disabled selected>Select Car</option>
                     <% @cars.each do |car| %>
                     <option value="<%=car.id%>"><%=car.make%> <%=car.model%></option>
                     <% end %>
@@ -296,6 +297,13 @@
                 </div>
             </div>
         </form>
+    </div>
+</div>
+
+<!-- Popup Window to Update User Profile -->
+<div id="edit_user" class="modal">
+    <div class="modal-content">
+
     </div>
 </div>
 
@@ -570,8 +578,15 @@
          </div>
          </div>
 
-
          <% end %>
          <% end %>
-
 </div>
+
+<footer class="page-footer red lighten-1 hoverable">
+     <div class="footer-copyright">
+       <div class="container">
+       © 2017 Copyright NAJZ Inc.
+       <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+       </div>
+     </div>
+</footer>
