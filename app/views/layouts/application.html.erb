@@ -77,11 +77,9 @@
       <script>Materialize.toast("<%= message %>", 6000, 'rounded red');</script>
       <% end %>
       <% end %>
-      <div id="top">
 
-      </div>
+
       <%= yield %>
-
       <div class="fixed-action-btn horizontal">
         <a class="btn-floating btn-large red">
           <i class="large material-icons">menu</i>
@@ -90,13 +88,16 @@
             <% if current_user%>
           <li><a class="btn-floating red" href="/sessions/destroy" data-method="delete"><i class="material-icons">exit_to_app</i></a></li>
           <% end %>
-          <li><a class="btn-floating green" href="#top"><i class="material-icons">publish</i></a></li>
+          <li><a class="btn-floating green" id="to_top"><i class="material-icons">publish</i></a></li>
         </ul>
       </div>
   </body>
 </html>
 <script>
     $(document).ready(function(){
+        $('#to_top').click(function(){
+            window.scrollTo(0,0);
+        })
            $('.parallax').parallax();
            $('ul.tabs').tabs();
            $('.modal').modal();
