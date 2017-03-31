@@ -8,9 +8,13 @@ class ApplicationController < ActionController::Base
       end
   end
 
+  def currentDate
+      Date.today
+  end
+
   def current_user
       User.find(session[:user_id]) if session[:user_id]
   end
 
-  helper_method :current_user, :remote_ip
+  helper_method :current_user, :remote_ip, :currentDate
 end
