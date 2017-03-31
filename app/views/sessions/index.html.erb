@@ -239,8 +239,8 @@
             <tbody>
                 <tr>
                   <td><%= trip.dCity %>, <%= trip.dState %></td>
-                  <td><%= trip.aCity %>, <%= trip.aCity %></td>
-                  <td><%= trip.dDate %></td>
+                  <td><%= trip.aCity %>, <%= trip.aState %></td>
+                  <td><%= trip.dDate.to_date %></td>
                   <td>$<%= trip.price %></td>
                   <td> # of <%= trip.car.seats %></td>
                   <td><%= trip.car.year %> <%= trip.car.make %> <%= trip.car.model %></td>
