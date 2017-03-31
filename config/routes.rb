@@ -12,4 +12,5 @@ Rails.application.routes.draw do
 
    get "/trips/view/:id" => "trips#show"
    post "/trips/create/" => "trips#create"
+   patch "trips/:id/update" => "trips#update"
 end
