@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HitchrIII</title>
+    <title>Hitch-r</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true %>
@@ -106,11 +106,11 @@
             });
             $('select').material_select();
             $(".button-collapse").sideNav();
-            $('.button-collapse').sideNav('show');
-              // Hide sideNav
-              $('.button-collapse').sideNav('hide');
-              // Destroy sideNav
-              $('.button-collapse').sideNav('destroy');
+            // $('.button-collapse').sideNav('show');
+            //   // Hide sideNav
+            //   $('.button-collapse').sideNav('hide');
+            //   // Destroy sideNav
+            //   $('.button-collapse').sideNav('destroy');
 
             $.get(`http://ip-api.com/json/<%=remote_ip%>`, function(res) {
                 $location = res.city;
